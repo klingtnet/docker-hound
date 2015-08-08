@@ -26,6 +26,6 @@ EXPOSE 6080
 ENV HOUND_DATA /var/hound/data
 RUN mkdir -p $HOUND_DATA
 ENV HOUND_CONF /etc/hound/conf.json
-ADD ./conf.json $HOUND_CONF
+ADD ./hound_conf.json $HOUND_CONF
 
 CMD houndd -conf $HOUND_CONF
