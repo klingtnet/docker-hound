@@ -35,19 +35,19 @@ def main(args):
             configfile.write(json_string)
 
 
-def auth(username, token):
-    ''' Return True if authentication against github API
-        was succesful, False otherwise
+def get_repos(username, token):
+    ''' Return a dict containing a users repo informations
+        otherwise None is returned
 
     '''
-    response = requests.get('https://api.github.com/user',
+    response = requests.get('https://api.github.com/user/repos',
                             auth=HTTPBasicAuth(username, token))
     if response.status_code == 200:
-        return True
+        return response.json()
     else:
         LOG.warn('Authentification failed, status code: {}'
                  .format(response.status_code))
-        return False
+        return None
 
 
 def get_args():
