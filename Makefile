@@ -1,6 +1,6 @@
 .PHONY: all
 
-IMAGE_NAME='etsy-hound'
+IMAGE_NAME='hound'
 
 all: build
 
