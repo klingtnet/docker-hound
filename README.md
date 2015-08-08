@@ -10,7 +10,7 @@ Note that the script requires python `requests`, you can install it via `pip ins
 
 - the github access token only needs `repo` or `public_repo` permissions
 
-![github token settings](./access_token.png)
+![github token settings](./token_settings.png)
 
 ## TODO
 
