@@ -23,9 +23,8 @@ def main(args):
     ''' main function
 
     '''
-    if auth(args.username, args.access_token):
-        repos = requests.get('https://api.github.com/users/{}/repos'
-                             .format(args.username)).json()
+    repos = get_repos(args.username, args.access_token)
+    if repos:
         for repo in repos:
             CONFIG['repos'][repo['name']] = {
                 'url': repo['clone_url']
