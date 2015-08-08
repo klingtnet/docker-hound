@@ -60,6 +60,8 @@ def get_args():
     parser.add_argument('access_token', help='github access token')
     parser.add_argument('-o', '--output', help='output filepath',
                         default='hound_conf.json')
+    parser.add_argument('-p', '--public', help='Use only public repos',
+                        action='store_true')
     return parser.parse_args()
 
 
