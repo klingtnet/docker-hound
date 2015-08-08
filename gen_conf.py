@@ -26,9 +26,12 @@ def main(args):
     repos = get_repos(args.username, args.access_token)
     if repos:
         for repo in repos:
-            CONFIG['repos'][repo['name']] = {
-                'url': repo['clone_url']
-            }
+            if args.public and repo['private']:
+                pass
+            else:
+                CONFIG['repos'][repo['name']] = {
+                    'url': repo['clone_url']
+                }
         with open(args.output, 'w') as configfile:
             json_string = json.dumps(CONFIG, sort_keys=True, indent=4)
             configfile.write(json_string)
