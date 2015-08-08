@@ -8,6 +8,10 @@ run `gen-conf.py` and provide your github username and access token to populate 
 Access tokens can be generated in your [github profile settings](https://github.com/settings/tokens).
 Note that the script requires python `requests`, you can install it via `pip install --user requests` locally or with the package manager of your choice.
 
+- the github access token only needs `repo` or `public_repo` permissions
+
+![github token settings](./access_token.png)
+
 ## TODO
 
 - data-only container for configuration
