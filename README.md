@@ -13,4 +13,8 @@ Note that the script requires python `requests`, you can install it via `pip ins
 
 ![github token settings](./token_settings.png)
 
+## Run
 
+- `$ make && make data` to create both, the `hound` and `hound-data` container
+- `./run.sh [PORT]`
+- if you omit the PORT option, the container will expose on 8080
