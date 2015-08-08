@@ -13,6 +13,4 @@ Note that the script requires python `requests`, you can install it via `pip ins
 
 ![github token settings](./token_settings.png)
 
-## TODO
 
-- data-only container for configuration
