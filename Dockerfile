@@ -23,4 +23,4 @@ RUN go get github.com/etsy/hound/cmds/...
 
 EXPOSE 6080
 
-CMD /usr/bin/houndd
+CMD houndd -conf $HOUND_CONF
